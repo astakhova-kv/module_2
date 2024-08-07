@@ -4,21 +4,21 @@ def draw_area():
 
 
 def check_winer():
-    if area[0][0] == area[0][1] == area[0][2]:
+    if area[0][0] == area[0][1] == area[0][2] == 'X' or area[0][0] == area[0][1] == area[0][2] == '0':
         return True
-    if area[0][0] == area[1][1] == area[2][2]:
+    if area[0][0] == area[1][1] == area[2][2] == 'X' or area[0][0] == area[1][1] == area[2][2] == '0':
         return True
-    if area[1][0] == area[1][1] == area[1][2]:
+    if area[1][0] == area[1][1] == area[1][2] == 'X' or area[1][0] == area[1][1] == area[1][2] == '0':
         return True
-    if area[2][0] == area[2][1] == area[2][2]:
+    if area[2][0] == area[2][1] == area[2][2] == 'X' or area[2][0] == area[2][1] == area[2][2] == '0':
         return True
-    if area[0][0] == area[1][0] == area[2][0]:
+    if area[0][0] == area[1][0] == area[2][0] == 'X' or area[0][0] == area[1][0] == area[2][0] == '0':
         return True
-    if area[0][1] == area[1][1] == area[2][1]:
+    if area[0][1] == area[1][1] == area[2][1] == 'X' or area[0][1] == area[1][1] == area[2][1] == '0':
         return True
-    if area[0][2] == area[1][2] == area[2][2]:
+    if area[0][2] == area[1][2] == area[2][2] == 'X' or area[0][2] == area[1][2] == area[2][2] == '0':
         return True
-    if area[0][2] == area[1][1] == area[2][0]:
+    if area[0][2] == area[1][1] == area[2][0] == 'X' or area[0][2] == area[1][1] == area[2][0] == '0':
         return True
     else:
         return False
@@ -51,5 +51,6 @@ for turn in range(1, 10):
         print('Ячейка занята. Вы пропускаете ход.')
         draw_area()
         continue
-
+    if turn == 9 and prov_win == False:
+        print('Победила дружба')
     draw_area()
