@@ -4,10 +4,15 @@ not_primes = []
 
 for i in range(1, len(numbers)):
     kol_del = 0
+    is_prime = numbers[i]
+    is_prime = True
     for j in range(2, i+1):
         if numbers[i] % j == 0:
             kol_del += 1
-    if kol_del == 0:
+            if kol_del > 0:
+                is_prime = False
+                break
+    if is_prime == True:
         primes.append(numbers[i])
     else:
         not_primes.append(numbers[i])
