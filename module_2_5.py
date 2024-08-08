@@ -6,6 +6,5 @@ def get_matrix(n, m, value):
     return (matrix)
 
 
-mat = get_matrix(2, 2, 10)
-for i in range(len(mat)):
-    print(*mat[i])
+result = get_matrix(2, 2, 10)
+print(result)
